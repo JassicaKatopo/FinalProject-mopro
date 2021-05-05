@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import Splashscreen from './pages/Spalshscreen'
+import {Splashscreen} from './pages/Spalshscreen'
 
 const App = () => {
     return (
@@ -10,4 +10,4 @@ const App = () => {
 
 export default App
 
-const styles = StyleSheet.create({})
+
