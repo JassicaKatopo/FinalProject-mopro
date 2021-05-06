@@ -1,25 +1,33 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import Splashscreen from '../pages/Spalshscreen';
-import { SignIn } from '../pages';
+import React, {useEffect} from 'react';
+import { StyleSheet, Text, View } from 'react-native'
+import { Logo } from '../../assets'
 
+const Splashscreen = ({navigation}) => {
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate('SignIn');
+        }, 3000);
+    }, []);
 
-const Stack = createStackNavigator();
-
-const Router = () => {
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="SplashScreen" 
-            component={Splashscreen}
-            options={{headerShown: false}} 
-            />
-            <Stack.Screen name="SignIn" 
-            component={SignIn}
-            options={{headerShown: false}}  
-            />
-        </Stack.Navigator>
-    );
-           
-};
+        <View style={styles.page}>
+            <Logo />
+            <Text style={styles.text}>Welcome to Wedds</Text>
+        </View>
+    )
+}
 
-export default Router
+export default Splashscreen
+
+const styles = StyleSheet.create({
+    page:{
+        flex: 1,
+        backgroundColor: '#FFCCE1',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    text:{
+        fontSize: 25,
+        fontWeight: '500',
+    },
+});
