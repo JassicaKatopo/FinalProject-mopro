@@ -1,5 +1,6 @@
-import Splashscreen from './pages/Spalshscreen';
-import SignIn from './pages/SignIn';
+import Splashscreen from './Spalshscreen';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
-export {Splashscreen, SignIn};
+export {Splashscreen, SignIn, SignUp};
 
