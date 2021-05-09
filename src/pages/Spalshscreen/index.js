@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { StyleSheet, Text, View } from 'react-native'
 import { Logo } from '../../assets'
 
-const Splashscreen = ({navigation}) => {
+const Spalshscreen = ({navigation}) => {
     useEffect(() => {
         setTimeout(() => {
             navigation.navigate('SignIn');
@@ -17,7 +17,7 @@ const Splashscreen = ({navigation}) => {
     )
 }
 
-export default Splashscreen
+export default Spalshscreen
 
 const styles = StyleSheet.create({
     page:{

@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import { IconBack } from '../../../assets/icon';
 import {Gap} from '../../atoms';
 
-const Header = ({title}) => {
+const Header = ({title, onBack}) => {
     return (
      <View style={styles.container}>
          {onBack && (

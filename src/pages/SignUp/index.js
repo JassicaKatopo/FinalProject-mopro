@@ -7,13 +7,20 @@ const SignUp = ({navigation}) => {
         <View style={styles.page}>
             <Header title="Sign Up" onBack={() => navigation.goBack()} />
             <View style={styles.contentWrapper}>
-                <TextInput title="Full Name" placeholder="Enter your full name" />
+                <TextInput title="Full Name" 
+                placeholder="Enter your full name" 
+                />
+                <Gap height={16} />
                 <TextInput
                 title="Email Address"
                 placeholder="Enter your email address"
                 />
-                <TextInput title="Password" placeholder="Enter your password" />
-                <Button title="Continue" />
+                <Gap height={16} />
+                <TextInput title="Password" 
+                placeholder="Enter your password" 
+                />
+                <Gap height={24} />
+                <Button title="Create Account" />
             </View>
         </View>
     );
