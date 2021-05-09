@@ -1,26 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
-import {Header} from '../../components';
+import { StyleSheet, View } from 'react-native';
+import { Button, Gap, Header, TextInput } from '../../components'
 
 const SignUp = ({navigation}) => {
     return (
         <View style={styles.page}>
             <Header title="Sign Up" onBack={() => navigation.goBack()} />
             <View style={styles.contentWrapper}>
-                <TextInput title="Full Name" 
-                placeholder="Enter your full name" 
+                <TextInput title="Username" 
+                placeholder="Type your username" 
                 />
                 <Gap height={16} />
                 <TextInput
                 title="Email Address"
-                placeholder="Enter your email address"
+                placeholder="type your email address"
                 />
                 <Gap height={16} />
                 <TextInput title="Password" 
-                placeholder="Enter your password" 
+                placeholder="Type your password" 
                 />
                 <Gap height={24} />
-                <Button title="Create Account" />
+                <Button title="Create Account"
+                onPress={() => navigation.navigate('SignIn')} />
+
             </View>
         </View>
     );
