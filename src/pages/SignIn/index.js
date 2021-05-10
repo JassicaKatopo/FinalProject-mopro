@@ -28,8 +28,8 @@ const SignIn = ({navigation}) => {
                     /> 
             </View>   
         </View>
-    )
-}
+    );
+};
 
 export default SignIn
 
