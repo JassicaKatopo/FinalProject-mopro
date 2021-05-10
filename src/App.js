@@ -1,7 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import {Splashscreen, SignIn} from './pages'
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Router from './router';
 
