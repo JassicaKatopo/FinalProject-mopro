@@ -5,13 +5,13 @@ const Button = ({title, color="#FFCCE1", textColor='#000000', onPress}) => {
     return (
         <TouchableOpacity onPress={onPress} activeOpacity={0.5}>
             <View style={styles.container(color)}>
-            <Text style={styles.text(textColor)}>{title}</Text>
-        </View>
+                <Text style={styles.text(textColor)}>{title}</Text>
+            </View>
         </TouchableOpacity>
-    )
-}
+    );
+};
 
-export default Button
+export default Button;
 
 const styles = StyleSheet.create({
     container: color => ({

@@ -10,7 +10,7 @@ const SignIn = ({navigation}) => {
                 <TextInput 
                     title="Email Address" 
                     placeholder="Type your email address"
-                    />
+                />
                 <Gap height={14} />
                 <TextInput 
                     title="Password" 
@@ -28,10 +28,10 @@ const SignIn = ({navigation}) => {
                     /> 
             </View>   
         </View>
-    )
-}
+    );
+};
 
-export default SignIn
+export default SignIn;
 
 const styles = StyleSheet.create({
     page: {
