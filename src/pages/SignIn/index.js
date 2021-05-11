@@ -1,8 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Button, Gap, Header, TextInput } from '../../components'
+import firebase from '../../config/Firebase';
 
 const SignIn = ({navigation}) => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] =useState('');
+
+    const onSubmit =() =>{
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .then(res => navigation.navigate('Home'))
+            .catch(error => console.log('error,', error))
+    }
+
     return (
         <View style={styles.page}>
             <Header title="Sign In"/>
@@ -10,15 +23,21 @@ const SignIn = ({navigation}) => {
                 <TextInput 
                     title="Email Address" 
                     placeholder="Type your email address"
+                    value={email}
+                    onChangeText={value => setEmail(value)}
                 />
                 <Gap height={14} />
                 <TextInput 
                     title="Password" 
                     placeholder="Type your password"
+                    value={password}
+                    onChangeText={value => setPassword(value)}
+                    secureTextEntry
                     />
                 <Gap height={45} />
                 <Button 
                     title="Sign In"
+                    onPress={onSubmit}
                     />
                 <Gap height={40} />
                 <Button 
